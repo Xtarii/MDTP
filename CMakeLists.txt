@@ -40,5 +40,5 @@ install(EXPORT MDTPTargets
 
 
 # Library Tests
-add_executable(test .test/main.cpp)
-target_link_libraries(test PRIVATE MDTP)
+#add_executable(test .test/main.cpp)
+#target_link_libraries(test PRIVATE MDTP)

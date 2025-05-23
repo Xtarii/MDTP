@@ -19,8 +19,8 @@ MDTP communication listens on port **50** by default.
 If you for some reason wants to use MDTP to send data
 and receive data you are more than welcome to.
 
+To install MDTP in a cmake project add this to the cmake
 ```cmake
-# Installation
 FetchContent_Declare(
     MDTP
     GIT_REPOSITORY https://github.com/Xtarii/MDTP.git

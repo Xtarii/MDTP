@@ -40,24 +40,19 @@ void runClient() {
 
 
 int main() {
-    // MDTP::init();
-    //
-    //
-    //
-    // // Server Thread
-    // std::thread serverThread(runServer);
-    // std::this_thread::sleep_for(std::chrono::seconds(1)); // Server Startup delay
-    //
-    // // Client Thread
-    // std::thread clientThread(runClient);
-    //
-    //
-    // clientThread.join();
-    // serverThread.join();
-    // MDTP::clean();
+    MDTP::init();
 
 
-    MDTPServer server = MDTPServer();
-    MDTPConnection connection = server.accept();
-    connection.write({ .command = STATUS_OK, .body = "# Hello World" });
+
+    // Server Thread
+    std::thread serverThread(runServer);
+    std::this_thread::sleep_for(std::chrono::seconds(1)); // Server Startup delay
+
+    // Client Thread
+    std::thread clientThread(runClient);
+
+
+    clientThread.join();
+    serverThread.join();
+    MDTP::clean();
 }

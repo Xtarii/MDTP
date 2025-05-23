@@ -1,11 +1,11 @@
-#include <library.h>
+#include <MDTP/core.h>
 
 #include <thread>
-#include <parser/parser.h>
+#include <MDTP/parser/parser.h>
 #include <sstream>
-#include <socket/MDTPClient.h>
+#include <MDTP/socket/MDTPClient.h>
 
-#include <socket/MDTPServer.h>
+#include <MDTP/socket/MDTPServer.h>
 
 
 
@@ -40,10 +40,6 @@ void runClient() {
 
 
 int main() {
-    MDTP::init();
-
-
-
     // Server Thread
     std::thread serverThread(runServer);
     std::this_thread::sleep_for(std::chrono::seconds(1)); // Server Startup delay
@@ -54,5 +50,4 @@ int main() {
 
     clientThread.join();
     serverThread.join();
-    MDTP::clean();
 }

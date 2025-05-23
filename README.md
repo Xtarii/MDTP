@@ -19,6 +19,10 @@ MDTP communication listens on port **50** by default.
 If you for some reason wants to use MDTP to send data
 and receive data you are more than welcome to.
 
+
+
+#### Installation
+
 To install MDTP in a cmake project add this to the cmake
 ```cmake
 FetchContent_Declare(
@@ -29,6 +33,8 @@ FetchContent_Declare(
 ```
 
 
+
+#### Creating a Server
 
 Creating a Server
 ```cpp
@@ -47,6 +53,10 @@ MDTPObject request = client.read();
 // Writes Data back to client
 client.write({ .command = STATUS_OK, .body = "# Hello World\r\nA markdown protocol" });
 ```
+
+
+
+#### Creating a Client
 
 Creating a Client
 ```cpp

@@ -1,6 +1,6 @@
 #ifndef MDTPOPTIONS_H
 #define MDTPOPTIONS_H
-#include <library.h>
+#include <MDTP/core.h>
 
 /**
  * MDTP Data Options

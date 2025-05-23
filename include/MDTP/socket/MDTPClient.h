@@ -1,7 +1,7 @@
 #ifndef MDTPCLIENT_H
 #define MDTPCLIENT_H
 
-#include <data/MDTPOptions.h>
+#include <MDTP/data/MDTPOptions.h>
 
 #include "AbstractBaseSocket.h"
 

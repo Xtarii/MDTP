@@ -1,7 +1,7 @@
 #ifndef MDTPCONNECTION_H
 #define MDTPCONNECTION_H
-#include <data/MDTPOptions.h>
-#include <socket/AbstractBaseSocket.h>
+#include <MDTP/data/MDTPOptions.h>
+#include <MDTP/socket/AbstractBaseSocket.h>
 
 /**
  * MDTP Connection Socket

@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
 # Library ( C++ Files )
-add_library(MDTP STATIC src/library.cpp
+add_library(MDTP STATIC src/core.cpp
         src/parser/header/MDTPHeader.cpp
         src/parser/parser.cpp
         src/socket/AbstractBaseSocket.cpp

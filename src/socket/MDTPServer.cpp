@@ -1,6 +1,6 @@
-#include "socket/MDTPServer.h"
+#include "MDTP/socket/MDTPServer.h"
 
-#include <library.h>
+#include <MDTP/core.h>
 
 
 MDTPServer::MDTPServer(const int port) {

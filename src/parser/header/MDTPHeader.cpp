@@ -1,7 +1,8 @@
-#include "parser/header/MDTPHeader.h"
+#include "MDTP/parser/header/MDTPHeader.h"
 
-#include <library.h>
-#include <parser/parser.h>
+#include <MDTP/core.h>
+#include <MDTP/parser/parser.h>
+
 
 
 NodeToken convertToToken(std::string& raw) {

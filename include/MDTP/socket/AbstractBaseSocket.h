@@ -1,9 +1,9 @@
 #ifndef ABSTRACTBASESOCKET_H
 #define ABSTRACTBASESOCKET_H
 
-#include <parser/parser.h>
+#include <MDTP/parser/parser.h>
 
-#include <library.h>
+#include <MDTP/core.h>
 
 #ifdef _WIN32
 #include <winsock2.h>

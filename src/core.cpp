@@ -1,4 +1,4 @@
-#include "library.h"
+#include "MDTP/core.h"
 
 #ifdef _WIN32
 #include <winsock2.h>

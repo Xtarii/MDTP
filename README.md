@@ -25,11 +25,17 @@ and receive data you are more than welcome to.
 
 To install MDTP in a cmake project add this to the cmake
 ```cmake
+include( FetchContent )
 FetchContent_Declare(
-    MDTP
-    GIT_REPOSITORY https://github.com/Xtarii/MDTP.git
-    GIT_TAG <tag>
+        MDTP
+        GIT_REPOSITORY https://github.com/Xtarii/MDTP.git
+        GIT_TAG <tag>    # Version Tag
 )
+FetchContent_MakeAvailable(MDTP)
+
+
+
+target_link_libraries(<project> PRIVATE MDTP)    # Link to Project
 ```
 
 

@@ -49,7 +49,7 @@ namespace MDTP {
     /**
      * Network Exception
      */
-    class NetworkException : std::exception {
+    class NetworkException : public std::exception {
         public:
             /**
              * Throws a Network Exception

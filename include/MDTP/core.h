@@ -50,11 +50,22 @@ namespace MDTP {
      * Network Exception
      */
     class NetworkException : public std::exception {
+        /**
+         * Error Message
+         */
+        const char* error;
+
+
+
         public:
             /**
              * Throws a Network Exception
              */
-            explicit NetworkException(const char* cause) : std::exception(cause) {}
+            explicit NetworkException(const char* cause) { this->error = cause; }
+
+            const char* what() const noexcept override {
+                return (std::string(exception::what()) + error).c_str(); // Not good I know
+            }
     };
 
 

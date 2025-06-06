@@ -10,12 +10,23 @@
 /**
  * Parser Exception
  */
-class ParserException : std::exception {
+class ParserException : public std::exception {
+    /**
+     * Error Message
+     */
+    const char* error;
+
+
+
     public:
         /**
          * Casts a Parser Exception with the message **cause**
          */
-        explicit ParserException(const char* cause) : std::exception(cause) {}
+        explicit ParserException(const char* cause) { this->error = cause; }
+
+        const char* what() const noexcept override {
+            return (std::string(exception::what()) + error).c_str(); // Not good I know
+        }
 };
 
 

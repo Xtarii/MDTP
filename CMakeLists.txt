@@ -15,6 +15,7 @@ add_library(MDTP STATIC src/core.cpp
         src/socket/MDTPClient.cpp
         src/socket/connection/MDTPConnection.cpp
         src/data/MDTPOptions.cpp)
+target_link_libraries(MDTP ws2_32)
 
 
 
